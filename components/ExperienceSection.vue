@@ -30,7 +30,7 @@
               <div class="flex gap-2 mt-4">
                 <Badge src="/vitejs.svg" alt="React" text="Vite" />
                 <Badge src="/react.svg" alt="React" text="React" />
-                <Badge src="/typeScript.svg" alt="React" text="TypeScript" /> 
+                <Badge src="/typescript.svg" alt="React" text="TypeScript" /> 
                 <Badge src="/tailwind.svg" alt="React" text="Tailwind CSS" />
                 <Badge src="/azure.svg" alt="React" text="Azure" />
                 <Badge src="/postgresql.svg" alt="PostgreSQL" text="PostgreSQL" />

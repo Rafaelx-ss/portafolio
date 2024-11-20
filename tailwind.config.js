@@ -5,7 +5,7 @@ export default {
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './app.vue',
-    './public/**/*.svg', // Añadir esta línea
+    './public/**/*.svg',
   ],
   theme: {
     extend: {
