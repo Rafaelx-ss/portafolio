@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-dark to-dark-lighter text-white selection:bg-yellow-400/20">
-    <TheHeader id="header" className="header-class" />
-    <main class="max-w-3xl mx-auto px-4">
+    <TheHeader id="header" class="header-class" />
+    <main class="max-w-full md:max-w-3xl mx-auto px-2 md:px-4">
       <HeroSection />
       <ExperienceSection />
       <ProjectsSection />
@@ -29,7 +29,6 @@ export default {
     TheFooter
   }
 }
-
 </script>
 
 <style>
