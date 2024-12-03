@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="grid grid-cols-4 md:grid-cols-9 gap-4">
+    <div class="grid grid-cols-5 md:grid-cols-9 sm:grid-cols-5 xs:grid-cols-12 gap-4">
       <div
         v-for="(tech, index) in technologies"
         :key="tech.name"
@@ -25,13 +25,12 @@
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300"
             />
-            <div
-              class="absolute bottom-2 left-0 right-0 text-center text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              {{ tech.name }}
-            </div>
+            
           </div>
         </a>
+        <div class="left-0 right-0 text-center text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 skills">
+          {{ tech.name }}
+        </div>
       </div>
     </div>
   </div>
@@ -54,6 +53,13 @@ const technologies = ref([
 </script>
 
 <style scoped>
+@media(max-width: 768px) {
+  .skills{
+    display: none;
+  }
+
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
