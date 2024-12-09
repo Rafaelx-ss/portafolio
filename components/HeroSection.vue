@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen flex flex-col justify-center items-center text-center animate-fade-in px-4 py-8 relative overflow-hidden">
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center animate-fade-in px-4 py-8 relative overflow-hidden">
     <div class="absolute inset-0 z-0"></div>
     <div class="relative z-10 max-w-4xl mx-auto">
       <div class="relative group mb-8 mt-5 inline-block">
