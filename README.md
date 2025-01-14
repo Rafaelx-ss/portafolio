@@ -22,7 +22,7 @@ Welcome to **Rafaelx-ss Portfolio**, a professional and elegant showcase of my s
 Explore the live version of the portfolio here:
 **[Rafaelx-ss Portfolio](https://portafolio-rafaelx.vercel.app/)**
 
-![Portfolio Screenshot](./assets/portfolio-screenshot.png)
+![Portfolio Screenshot](./public/FILL.png)
 
 ---
 
