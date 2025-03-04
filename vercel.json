@@ -1,9 +1,12 @@
 {
-    "rewrites": [
-        {
-            "source": "/:path*",
-            "destination": "/index.html"
-        }
-    ],
-    "trailingSlash": false
+    "build": {
+        "command": "ng build --configuration=production",
+        "outputDirectory": "dist"
+    },
+    "routes": [
+    {
+        "src": "/(.*)",
+        "dest": "/index.html"
+    }
+]
 }
