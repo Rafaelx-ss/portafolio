@@ -3,8 +3,8 @@
     "version": "19.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --host 0.0.0.0 --port 3000", 
-        "build": "ng build --configuration production",
+        "start": "ng serve", 
+        "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "format": "prettier --write \"**/*.{js,mjs,ts,mts,d.ts,html}\" --cache",
         "test": "ng test"
