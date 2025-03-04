@@ -1,51 +1,16 @@
-export default {
-  darkMode: 'class', 
-  content: [
-    './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './app.vue',
-    './public/**/*.svg',
-  ],
-  theme: {
-    extend: {
-      colors: {
-        dark: {
-          DEFAULT: '#0a0b14',
-          lighter: '#151828'
+/** @type {import('tailwindcss').Config} */
+const primeui = require('tailwindcss-primeui');
+module.exports = {
+    darkMode: ['selector', '[class="app-dark"]'],
+    content: ['./src/**/*.{html,ts,scss,css}', './index.html'],
+    plugins: [primeui],
+    theme: {
+        screens: {
+            sm: '576px',
+            md: '768px',
+            lg: '992px',
+            xl: '1200px',
+            '2xl': '1920px'
         }
-      },
-      container: {
-        center: true,
-        padding: '1rem',
-      },
-      screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'slide-down': 'slideDown 0.3s ease-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-      },
-    },
-  },
-  plugins: [],
-}
+    }
+};
