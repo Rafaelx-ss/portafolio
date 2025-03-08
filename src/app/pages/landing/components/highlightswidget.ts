@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
                 <div class="col-span-12 lg:col-span-6 my-auto flex flex-col text-center lg:text-left lg:items-start gap-4">
                     <div class="flex items-center justify-center bg-yellow-200 self-center lg:self-start" style="width: 4.2rem; height: 4.2rem; border-radius: 10px">
                         <!-- <i class="pi pi-fw pi-desktop !text-3xl text-yellow-700"></i> -->
-                        <img src="/png/brentec.png" class="w-7/12" alt="mockup" />
+                        <img src="assets/png/brentec.png" class="w-7/12" alt="Brentec logo" />
                     </div>
                     <div class="leading-none text-surface-900 dark:text-surface-0 text-3xl font-normal">Brentec Soluciones Tecnológicas</div>
                     <span class="text-surface-700 dark:text-surface-100 text-2xl leading-normal mr-0 md:mr-2" style="max-width: 650px">
@@ -23,19 +23,19 @@ import { Component } from '@angular/core';
                 </div>
 
                 <a href="https://brentec.mx/" target="_blank" class="flex justify-end order-1 sm:order-2 col-span-12 lg:col-span-6 bg-yellow-100 p-0 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-yellow-200" style="border-radius: 8px">
-                    <img src="/png/mockup-desktop-brentec.png" class="w-11/12 transition-transform duration-300 " alt="mockup" />
+                    <img src="assets/png/mockup-desktop-brentec.png" class="w-11/12 transition-transform duration-300" alt="Brentec mockup" />
                 </a>
             </div>
 
             <div class="grid grid-cols-12 gap-4 mt-20 pb-2 md:pb-20">
                 <a href="https://www.codyexpert.com/site/index.html" target="_blank" class="flex justify-center col-span-12 lg:col-span-6 bg-purple-100 p-0 order-1 lg:order-none transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-purple-200" style="border-radius: 8px">
-                    <img src="/png/mockup-cody.png" class="w-11/12 transition-transform duration-300 " alt="mockup mobile" />
+                    <img src="assets/png/mockup-cody.png" class="w-11/12 transition-transform duration-300" alt="CodyExpert mockup" />
                 </a>  
 
                 <div class="col-span-12 lg:col-span-6 my-auto flex flex-col lg:items-end text-center lg:text-right gap-4">
                     <div class="flex items-center justify-center bg-purple-200 self-center lg:self-end" style="width: 4.2rem; height: 4.2rem; border-radius: 10px">
                         <!-- <i class="pi pi-fw pi-mobile !text-4xl text-purple-700"></i> -->
-                        <img src="/png/Cody.png" class="w-7/12" alt="mockup" />
+                        <img src="assets/png/Cody.png" class="w-7/12" alt="CodyExpert logo" />
                     </div>
                     <div class="leading-none text-surface-900 dark:text-surface-0 text-3xl font-normal">CodyExpert</div>
                     <span class="text-surface-700 dark:text-surface-100 text-2xl leading-normal ml-0 md:ml-2" style="max-width: 650px">

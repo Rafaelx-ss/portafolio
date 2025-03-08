@@ -19,7 +19,7 @@ import { RippleModule } from 'primeng/ripple';
                     <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
                         <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Desarrollo Web</div>
                         <!-- <img src="https://primefaces.org/cdn/templates/sakai/landing/free.svg" class="w-10/12 mx-auto" alt="web development" /> -->
-                        <img src="/svg/web.svg" class="w-6/12 mx-auto" alt="Mobile Development" />
+                        <img src="assets/svg/web.svg" class="w-6/12 mx-auto" alt="Mobile Development" />
                         <div class="my-8 flex flex-col items-center gap-4">
                             <div class="flex items-center">
                                 <span class="text-2xl text-surface-600 dark:text-surface-200 text-center">Aplicaciones web modernas y responsivas</span>
@@ -55,7 +55,7 @@ import { RippleModule } from 'primeng/ripple';
                     <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
                         <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Desarrollo Backend</div>
                         <!-- <img src="https://primefaces.org/cdn/templates/sakai/landing/startup.svg" class="w-10/12 mx-auto" alt="backend development" /> -->
-                        <img src="/svg/server.svg" class="w-6/12 mx-auto" alt="backend development" />
+                        <img src="assets/svg/server.svg" class="w-6/12 mx-auto" alt="backend development" />
                         <div class="my-8 flex flex-col items-center gap-4">
                             <div class="flex items-center">
                                 <span class="text-2xl text-surface-600 dark:text-surface-200 text-center">APIs y servicios escalables</span>
@@ -92,7 +92,7 @@ import { RippleModule } from 'primeng/ripple';
                     <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
                         <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Desarrollo Móvil</div>
                         <!-- <img src="https://primefaces.org/cdn/templates/sakai/landing/enterprise.svg" class="w-10/12 mx-auto" alt="mobile development" /> -->
-                        <img src="/svg/mobile.svg" class="w-6/12 mx-auto" alt="mobile development" />
+                        <img src="assets/svg/mobile.svg" class="w-6/12 mx-auto" alt="mobile development" />
                         <div class="my-8 flex flex-col items-center gap-4">
                             <div class="flex items-center">
                                 <span class="text-2xl text-surface-600 dark:text-surface-200 text-center">Aplicaciones móviles multiplataforma</span>
