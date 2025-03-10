@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
         <div id="highlights" class="py-6 px-6 lg:px-20 mx-0 my-12 lg:mx-20">
             <div class="text-center">
                 <div class="text-surface-900 dark:text-surface-0 font-normal mb-2 text-4xl">Experiencia laboral</div>
-                <span class="text-muted-color text-2xl">Tengo experiencia en el desarrollo de software a nivel internacional, construyendo plataformas de gestión para empresas como Grupo Modelo. Me apasiona crear soluciones eficientes, escalables y de alto rendimiento.</span>
+                <span class="text-muted-color text-2xl">Tengo experiencia en el desarrollo de software a nivel internacional, construyendo plataformas de gestión para empresas. Me apasiona crear soluciones eficientes, escalables y de alto rendimiento.</span>
             </div>
 
             <div class="grid grid-cols-12 gap-4 my-20 pt-2 md:pt-20">
@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
                     <div class="leading-none text-surface-900 dark:text-surface-0 text-3xl font-normal">Brentec Soluciones Tecnológicas</div>
                     <span class="text-surface-700 dark:text-surface-100 text-2xl leading-normal mr-0 md:mr-2" style="max-width: 650px">
                         <strong>Desarrollador de Software</strong> (Febrero 2025 - Actualidad)<br>
-                        En mi rol como <strong>desarrollador de software</strong> en Brentec, lidero el desarrollo y mantenimiento de <strong>Bonobo</strong>, una plataforma esencial para la <strong>industria energética</strong>. Mis responsabilidades abarcan la <strong>implementación</strong> de nuevas funcionalidades, la <strong>optimización</strong> de procesos y la <strong>mejora</strong> del rendimiento, asegurando una experiencia de usuario fluida y eficiente. Además, integro Bonobo con <strong>sistemas empresariales</strong>, optimizo <strong>bases de datos</strong> y aplico <strong>estándares de seguridad</strong> y <strong>cumplimiento normativo</strong>, colaborando estrechamente con <strong>equipos multidisciplinarios</strong> para crear <strong>soluciones escalables</strong> y efectivas.
+                        En mi rol como <strong>desarrollador de software</strong> en Brentec, aporto con el desarrollo y mantenimiento de <strong>Bonobo</strong>, una plataforma esencial para la <strong>industria energética</strong>. Mis responsabilidades abarcan la <strong>implementación</strong> de nuevas funcionalidades, la <strong>optimización</strong> de procesos y la <strong>mejora</strong> del rendimiento, asegurando una experiencia de usuario fluida y eficiente. Además, integro Bonobo con <strong>sistemas empresariales</strong>, optimizo <strong>bases de datos</strong> y aplico <strong>estándares de seguridad</strong> y <strong>cumplimiento normativo</strong>, colaborando estrechamente con <strong>equipos multidisciplinarios</strong> para crear <strong>soluciones escalables</strong> y efectivas.
                     </span>
                 </div>
 
@@ -39,11 +39,11 @@ import { Component } from '@angular/core';
                     </div>
                     <div class="leading-none text-surface-900 dark:text-surface-0 text-3xl font-normal">CodyExpert</div>
                     <span class="text-surface-700 dark:text-surface-100 text-2xl leading-normal ml-0 md:ml-2" style="max-width: 650px">
-                        <strong>Desarrollador Full-Stack</strong> (Enero 2024 - Febrero 2025)<br>
+                        <strong>Desarrollador Full-Stack</strong> (Junio 2024 - Febrero 2025)<br>
                         En CodyExpert, desarrollé soluciones tecnológicas personalizadas para la administración empresarial, enfocándome en la modernización de plataformas y aplicaciones web escalables.<br><br>
                         <strong>Proyectos destacados:</strong><br>
-                        <strong>Visit Plan - Migración para Grupo Modelo:</strong><br>
-                        Lideré la migración a una solución moderna con React y Azure, optimizando la gestión de visitas en todo México.<br><br>
+                        <strong>Visit Plan - Sistema de Gestión de Visitas:</strong><br>
+                        Aporté desarrollando en la migración a una solución moderna con React y Azure, optimizando la gestión de visitas para una importante empresa de bebidas a nivel nacional.<br><br>
                         <strong>SOPMEX - Gestión para Estaciones de Servicio:</strong><br>
                         Desarrollé una plataforma para la administración de gasolineras con PHP y Yii2, mejorando la operatividad y experiencia del usuario.<br><br>
                         Esta experiencia fortaleció mis habilidades en soluciones escalables y colaboración en proyectos estratégicos.
