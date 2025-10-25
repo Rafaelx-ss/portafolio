@@ -8,7 +8,7 @@ export const authGuard = () => {
 
   if (!authService.isLoggedIn()) {
     // Si no está autenticado, redirigir al login
-    router.navigate(['/landing']);
+    router.navigate(['/auth/login']);
     return false;
   }
 
@@ -20,10 +20,10 @@ export const publicGuard = () => {
   const router = inject(Router);
 
   if (authService.isLoggedIn()) {
-    // Si está autenticado, redirigir a la página principal
-    router.navigate(['/landing']);
+    // Si está autenticado, redirigir al dashboard
+    router.navigate(['/dashboard']);
     return false;
   }
 
   return true;
-}; 
+};

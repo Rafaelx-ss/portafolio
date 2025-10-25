@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { RippleModule } from 'primeng/ripple';
 import { AppFloatingConfigurator } from '../../layout/component/app.floatingconfigurator';
+import { SupabaseService } from '../../services/supabase.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -20,7 +21,7 @@ import { AuthService } from '../service/auth.service';
                 <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)">
                     <div class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20" style="border-radius: 53px">
                         <div class="text-center mb-8">
-                            <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8 w-16 shrink-0 mx-auto">
+                            <!-- <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8 w-16 shrink-0 mx-auto">
                                 <path
                                     fill-rule="evenodd"
                                     clip-rule="evenodd"
@@ -36,9 +37,11 @@ import { AuthService } from '../service/auth.service';
                                         fill="var(--primary-color)"
                                     />
                                 </g>
-                            </svg>
-                            <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Rafael Solis</div>
-                            <span class="text-muted-color font-medium">Inicia sesión para continuar</span>
+                            </svg> -->
+                            <img src="https://www.wackyprint.com/designcodes/0/1/110/11102108.png" alt="Rafael Solis" class="mb-8 w-16 shrink-0 mx-auto rounded-full cursor-pointer" (click)="router.navigate(['/'])" />
+
+                            <div class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4">Panel de control de Rafael Solis</div>
+                            <span class="text-muted-color font-medium">¡Hola!, este es un apartado personal. :)</span>
                         </div>
 
                         <div>
@@ -53,12 +56,6 @@ import { AuthService } from '../service/auth.service';
                                     <p-checkbox [(ngModel)]="checked" id="rememberme1" binary class="mr-2"></p-checkbox>
                                     <label for="rememberme1">Recordarme</label>
                                 </div>
-                                <span class="font-medium no-underline ml-2 text-right cursor-pointer text-primary">¿Olvidaste tu contraseña?</span>
-                            </div>
-                            <div class="flex items-center justify-center">
-                                <span class="font-medium no-underline ml-2 text-right cursor-pointer text-primary mb-4">
-                                    ¿No tienes una cuenta?  <p-button label="Resistrate" severity="primary" text routerLink="/auth/register" />
-                                </span>
                             </div>
                             <p-button label="Iniciar sesión" styleClass="w-full" (onClick)="onLogin()"></p-button>
                         </div>
@@ -68,21 +65,28 @@ import { AuthService } from '../service/auth.service';
         </div>
     `
 })
-export class Login {    
+export class Login {
     email: string = '';
     password: string = '';
     checked: boolean = false;
-    
+
     constructor(
         private authService: AuthService,
-        private router: Router
+        public router: Router
     ) {}
 
-    onLogin() {
-        this.authService.login(this.email, this.password).then((isLoggedIn) => {
+    async onLogin() {
+        try {
+            const isLoggedIn = await this.authService.login(this.email, this.password);
             if (isLoggedIn) {
-                this.router.navigate(['/']);
+                this.router.navigate(['/dashboard']);
+            } else {
+                console.log('Error al iniciar sesión');
+                // Aquí podrías mostrar un mensaje de error al usuario
             }
-        });
+        } catch (error) {
+            console.error('Error en el login:', error);
+            // Aquí podrías mostrar un mensaje de error al usuario
+        }
     }
 }
