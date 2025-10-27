@@ -154,7 +154,7 @@ interface ContactForm {
                                         pInputText 
                                         id="name" 
                                         name="name"
-                                        [(ngModel)]="contactForm.name" 
+                                        [(ngModel)]="contactForm.nombreCliente" 
                                         placeholder="Tu nombre completo"
                                         class="w-full"
                                         required
@@ -177,7 +177,7 @@ interface ContactForm {
                                         id="email" 
                                         name="email"
                                         type="email"
-                                        [(ngModel)]="contactForm.email" 
+                                        [(ngModel)]="contactForm.correoCliente" 
                                         placeholder="tu@email.com"
                                         class="w-full"
                                         required
@@ -203,7 +203,7 @@ interface ContactForm {
                                         pInputText 
                                         id="company" 
                                         name="company"
-                                        [(ngModel)]="contactForm.company" 
+                                        [(ngModel)]="contactForm.empresaOProyecto" 
                                         placeholder="Nombre de tu empresa o proyecto"
                                         class="w-full"
                                     />
@@ -217,7 +217,7 @@ interface ContactForm {
                                         pInputText 
                                         id="phone" 
                                         name="phone"
-                                        [(ngModel)]="contactForm.phone" 
+                                        [(ngModel)]="contactForm.telefono" 
                                         placeholder="+52 999 123 4567"
                                         class="w-full"
                                     />
@@ -233,8 +233,8 @@ interface ContactForm {
                                     <p-select 
                                         id="projectType"
                                         name="projectType"
-                                        [(ngModel)]="contactForm.projectType" 
-                                        [options]="projectTypes" 
+                                        [(ngModel)]="contactForm.tipoProyecto" 
+                                        [options]="tipoProyecto" 
                                         optionLabel="label" 
                                         optionValue="value"
                                         placeholder="Selecciona el tipo de proyecto"
@@ -257,7 +257,7 @@ interface ContactForm {
                                     <p-select 
                                         id="budget"
                                         name="budget"
-                                        [(ngModel)]="contactForm.budget" 
+                                        [(ngModel)]="contactForm.presupuesto" 
                                         [options]="budgetRanges" 
                                         optionLabel="label" 
                                         optionValue="value"
@@ -275,7 +275,7 @@ interface ContactForm {
                                 <p-select 
                                     id="timeline"
                                     name="timeline"
-                                    [(ngModel)]="contactForm.timeline" 
+                                    [(ngModel)]="contactForm.tiempoEstimado" 
                                     [options]="timelineOptions" 
                                     optionLabel="label" 
                                     optionValue="value"
