@@ -194,7 +194,8 @@
       "tech_stack": "기술 스택",
       "experience": "경험",
       "services": "내 서비스",
-      "contact_me": "연락하기"
+      "contact_me": "연락하기",
+      "select_language": "언어"
     },
     "footer": {
       "text": "Rafael Solis 포트폴리오 by"

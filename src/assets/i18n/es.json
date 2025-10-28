@@ -194,7 +194,8 @@
       "tech_stack": "Tech Stack",
       "experience": "Experiencia",
       "services": "Mis Servicios",
-      "contact_me": "Contáctame"
+      "contact_me": "Contáctame",
+      "select_language": "Idioma"
     },
     "footer": {
       "text": "Portafolio de Rafael Solis by",

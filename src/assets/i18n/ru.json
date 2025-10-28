@@ -194,7 +194,8 @@
       "tech_stack": "Технологический стек",
       "experience": "Опыт",
       "services": "Мои услуги",
-      "contact_me": "Связаться со мной"
+      "contact_me": "Связаться со мной",
+      "select_language": "Язык"
     },
     "footer": {
       "text": "Портфолио Рафаэля Солиса by"

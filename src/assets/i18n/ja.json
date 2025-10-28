@@ -194,7 +194,8 @@
       "tech_stack": "テックスタック",
       "experience": "経験",
       "services": "私のサービス",
-      "contact_me": "お問い合わせ"
+      "contact_me": "お問い合わせ",
+      "select_language": "言語"
     },
     "footer": {
       "text": "Rafael Solisポートフォリオ by"

@@ -194,7 +194,8 @@
       "tech_stack": "技术栈",
       "experience": "经验",
       "services": "我的服务",
-      "contact_me": "联系我"
+      "contact_me": "联系我",
+      "select_language": "语言"
     },
     "footer": {
       "text": "Rafael Solis作品集 by"

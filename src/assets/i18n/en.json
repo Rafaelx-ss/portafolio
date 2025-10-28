@@ -195,7 +195,8 @@
       "tech_stack": "Tech Stack",
       "experience": "Experience",
       "services": "My Services",
-      "contact_me": "Contact Me"
+      "contact_me": "Contact Me",
+      "select_language": "Language"
     },
     "footer": {
       "text": "Rafael Solis Portfolio by"
