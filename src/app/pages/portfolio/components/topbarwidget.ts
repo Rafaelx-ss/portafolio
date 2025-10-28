@@ -49,56 +49,26 @@ import { MenuItem } from 'primeng/api';
                     </a>
                 </li>
                 <li>
-                    <p-dialog
-                        header="{{ 'portfolio.navigation.contact_me' | translate }}"
-                        [(visible)]="display"
-                        [breakpoints]="{ '960px': '90vw', '640px': '95vw' }"
-                        [style]="{ width: '50vw', maxWidth: '650px', zIndex: '99999' }"
-                        [modal]="true"
-                        [dismissableMask]="true"
-                        [draggable]="false"
-                        [resizable]="false"
-                        styleClass="contact-dialog"
-                        [closeOnEscape]="true"
-                    >
-                        <div class="contact-modal-content">
-                            <div class="contact-buttons-container">
-                                <p-button
-                                    [label]="isCopied ? 'Email copiado!' : 'Copiar Email'"
-                                    icon="pi pi-copy"
-                                    [ngClass]="{ 'email-copied': isCopied, 'pulse-animation': isCopied }"
-                                    styleClass="contact-button p-button-raised"
-                                    (click)="copyEmail()"
-                                    pTooltip="mxrafael.solis@gmail.com"
-                                    tooltipPosition="top"
-                                ></p-button>
-
-                                <p-button label="LinkedIn" icon="pi pi-linkedin" styleClass="contact-button p-button-raised p-button-secondary" (click)="openLink('https://www.linkedin.com/in/rafaelxs')"></p-button>
-
-                                <p-button label="GitHub" icon="pi pi-github" styleClass="contact-button p-button-raised p-button-success" (click)="openLink('https://github.com/Rafaelx-ss')"></p-button>
-
-                                <p-button label="Instagram" icon="pi pi-instagram" styleClass="contact-button p-button-raised p-button-info" (click)="openLink('https://www.instagram.com/rafaelx.ss/')"></p-button>
-
-                                <p-button label="WhatsApp" icon="pi pi-whatsapp" styleClass="contact-button p-button-raised p-button-warning" (click)="openLink('https://wa.me/+529999583010')"></p-button>
-                            </div>
-                        </div>
-                        <ng-template pTemplate="footer">
-                            <p-button label="Cerrar" icon="pi pi-times" styleClass="p-button-text" (click)="close()"></p-button>
-                        </ng-template>
-                    </p-dialog>
-                    <p-button label="{{ 'portfolio.navigation.contact_me' | translate }}" icon="pi pi-envelope" styleClass="p-button-rounded p-button-raised" (click)="open()"></p-button>
+                    <a (click)="scrollToSection('contact')" pRipple class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl cursor-pointer hover:underline">
+                        <span>{{ 'portfolio.navigation.contact_me' | translate }}</span>
+                    </a>
                 </li>
             </ul>
 
-            <div *ngIf="menuVisible">
-                <br />
-            </div>
-
-            <div class="layout-config-menu mr-20 display-flex flex-row gap-2">
-                <div class="relative" style="display: none;">
-                    <button class="layout-topbar-action layout-topbar-action-highlight" pStyleClass="@next" enterFromClass="hidden" enterActiveClass="animate-scalein" leaveToClass="hidden" leaveActiveClass="animate-fadeout">
-                        <i class="pi pi-palette"></i>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <button type="button" class="layout-topbar-action" (click)="open()" pTooltip="Contacto" tooltipPosition="bottom">
+                        <i class="pi pi-envelope"></i>
                     </button>
+
+                    <button type="button" class="layout-topbar-action" (click)="openLink('https://wa.me/529999583010')" pTooltip="WhatsApp" tooltipPosition="bottom">
+                        <i class="pi pi-whatsapp"></i>
+                    </button>
+
+                    <button type="button" class="layout-topbar-action" (click)="openLink('https://linkedin.com/in/rafaelxs')" pTooltip="LinkedIn" tooltipPosition="bottom">
+                        <i class="pi pi-linkedin"></i>
+                    </button>
+
                     <app-configurator style="display: none;" />
                 </div>
                 <!-- Selector de idioma mejorado -->
@@ -150,10 +120,6 @@ import { MenuItem } from 'primeng/api';
                     <button type="button" class="layout-topbar-action ml-2" (click)="toggleDarkMode()">
                         <i [ngClass]="{ 'pi ': true, 'pi-moon': layoutService.isDarkTheme(), 'pi-sun': !layoutService.isDarkTheme() }" style="font-size: 1.2em;"></i>
                     </button>
-
-                    <button type="button" class="login-action" (click)="router.navigate(['/auth/login'])">
-                        <i class="pi pi-user ml-4" style="font-size: 1.2em; "></i>
-                    </button>
                 </div>
             </div>
 
@@ -161,78 +127,76 @@ import { MenuItem } from 'primeng/api';
                 <br />
             </div>
         </div>
-    `,
-    styles: [
-        `
-            .language-split-button {
-                @apply border-surface-300 dark:border-surface-600;
-            }
 
-            .language-split-button .p-splitbutton-defaultbutton {
-                @apply text-lg font-medium;
-            }
-
-            .language-split-button .p-splitbutton-menubutton {
-                @apply text-sm;
-            }
-
-            .language-split-button:hover {
-                @apply border-primary bg-primary/5 dark:bg-primary/10;
-            }
-
-            .language-menu-item {
-                @apply flex items-center gap-2 px-3 py-2;
-            }
-
-            .language-menu-item .flag {
-                @apply text-lg;
-            }
-
-            .language-menu-item .name {
-                @apply text-sm font-medium;
-            }
-
-            .language-menu-item .code {
-                @apply text-xs text-surface-500 dark:text-surface-400 ml-auto;
-            }
-
-            .language-mobile-btn {
-                @apply w-10 h-10 rounded-full border-2 border-transparent bg-surface-100 dark:bg-surface-800 hover:bg-surface-200 dark:hover:bg-surface-700 transition-all duration-300 flex items-center justify-center cursor-pointer;
-            }
-
-            .language-mobile-btn:hover {
-                @apply scale-110 shadow-lg border-primary/20;
-            }
-
-            .language-panel-content {
-                @apply p-4;
-            }
-
-            .language-option-btn {
-                @apply flex flex-col items-center gap-1 p-3 rounded-lg border-2 border-transparent bg-surface-50 dark:bg-surface-800 hover:bg-surface-100 dark:hover:bg-surface-700 transition-all duration-300 cursor-pointer;
-            }
-
-            .language-option-btn.active {
-                @apply border-primary bg-primary/10 dark:bg-primary/20;
-            }
-
-            .language-option-btn:hover {
-                @apply scale-105 shadow-md;
-            }
-
-            .language-option-btn.active:hover {
-                @apply border-primary/80;
-            }
-        `
-    ]
+        <!-- Dialog de contacto -->
+        <p-dialog 
+            header="Contacto" 
+            [(visible)]="display" 
+            [modal]="true" 
+            [style]="{ width: '450px' }" 
+            [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+            [draggable]="false" 
+            [resizable]="false">
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                    <i class="pi pi-envelope text-primary text-xl"></i>
+                    <div>
+                        <p class="font-semibold text-surface-900 dark:text-surface-0">Correo electrónico</p>
+                        <p class="text-surface-600 dark:text-surface-400">{{ 'portfolio.contact.email.value' | translate }}</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                    <i class="pi pi-whatsapp text-green-500 text-xl"></i>
+                    <div>
+                        <p class="font-semibold text-surface-900 dark:text-surface-0">WhatsApp</p>
+                        <p class="text-surface-600 dark:text-surface-400">{{ 'portfolio.contact.whatsapp.value' | translate }}</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                    <i class="pi pi-linkedin text-blue-500 text-xl"></i>
+                    <div>
+                        <p class="font-semibold text-surface-900 dark:text-surface-0">LinkedIn</p>
+                        <p class="text-surface-600 dark:text-surface-400">{{ 'portfolio.contact.linkedin.value' | translate }}</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-2 mt-4">
+                    <button 
+                        type="button" 
+                        class="flex-1 p-button p-button-outlined" 
+                        (click)="copyEmail()"
+                        [class.p-button-success]="isCopied">
+                        <i [ngClass]="isCopied ? 'pi pi-check' : 'pi pi-copy'"></i>
+                        <span>{{ isCopied ? 'Copiado!' : 'Copiar Email' }}</span>
+                    </button>
+                    
+                    <button 
+                        type="button" 
+                        class="p-button p-button-outlined" 
+                        (click)="openLink('https://wa.me/529999583010')">
+                        <i class="pi pi-whatsapp"></i>
+                    </button>
+                    
+                    <button 
+                        type="button" 
+                        class="p-button p-button-outlined" 
+                        (click)="openLink('https://linkedin.com/in/rafaelxs')">
+                        <i class="pi pi-linkedin"></i>
+                    </button>
+                </div>
+            </div>
+        </p-dialog>
+    `
 })
 export class TopbarWidget {
     public layoutService: LayoutService;
     public showColorPicker: boolean = false;
     display: boolean = false;
     isCopied: boolean = false;
-    menuVisible: boolean = false;
     copyTimeout: any;
+    menuVisible: boolean = false;
     languages: any[] = [];
     currentLanguage: string = 'es';
     currentLanguageFlag: string = '';
@@ -257,26 +221,16 @@ export class TopbarWidget {
         });
     }
 
-    // Método para scroll suave a secciones
     scrollToSection(sectionId: string) {
         const element = document.getElementById(sectionId);
         if (element) {
-            // Cerrar el menú móvil si está abierto
-            this.menuVisible = false;
-
-            // Scroll suave con offset para el header fijo
-            const headerHeight = 80; // Ajusta según la altura de tu header
-            const elementPosition = element.offsetTop - headerHeight;
-
-            window.scrollTo({
-                top: elementPosition,
-                behavior: 'smooth'
-            });
+            element.scrollIntoView({ behavior: 'smooth' });
         }
+        this.menuVisible = false;
     }
 
     toggleDarkMode() {
-        this.layoutService.layoutConfig.update((state) => ({ ...state, darkTheme: !state.darkTheme }));
+        this.layoutService.toggleDarkMode();
     }
 
     onColorChange(event: Event) {
