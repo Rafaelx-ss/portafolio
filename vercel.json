@@ -1,4 +1,9 @@
 {
+  "buildCommand": "npm run build:prod",
+  "outputDirectory": "dist/sakai-ng/browser",
+  "framework": "angular",
+  "installCommand": "npm install",
+  "devCommand": "ng serve",
   "rewrites": [
       {
           "source": "/:path*",
