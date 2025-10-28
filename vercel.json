@@ -1,7 +1,9 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "angular",
-  "installCommand": "npm install",
-  "devCommand": "ng serve"
+  "rewrites": [
+      {
+          "source": "/:path*",
+          "destination": "/index.html"
+      }
+  ],
+  "trailingSlash": false
 }
