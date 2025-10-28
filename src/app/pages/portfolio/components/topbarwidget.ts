@@ -3,7 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { SplitButtonModule } from 'primeng/splitbutton';
-import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { PopoverModule } from 'primeng/popover';
 import { LayoutService } from '../../../layout/service/layout.service';
 import { CommonModule } from '@angular/common';
 import { AppConfigurator } from '../../../layout/component/app.configurator';
@@ -16,7 +16,7 @@ import { MenuItem } from 'primeng/api';
 @Component({
     selector: 'topbar-widget',
     standalone: true,
-    imports: [RouterModule, CommonModule, ButtonModule, RippleModule, AppConfigurator, DialogModule, TooltipModule, TranslateModule, SplitButtonModule, OverlayPanelModule],
+    imports: [RouterModule, CommonModule, ButtonModule, RippleModule, AppConfigurator, DialogModule, TooltipModule, TranslateModule, SplitButtonModule, PopoverModule],
     template: `
         <a class="flex items-center flex-col w-96 cursor-pointer text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal" (click)="scrollToSection('home')">
             <span>Rafael Solis</span>
@@ -98,7 +98,7 @@ import { MenuItem } from 'primeng/api';
                             <span class="text-lg">{{ currentLanguageFlag }}</span>
                         </button>
                         
-                        <p-overlaypanel #languagePanel [style]="{ 'min-width': '200px' }">
+                        <p-popover #languagePanel [style]="{ 'min-width': '200px' }">
                             <div class="language-panel-content">
                                 <h4 class="text-lg font-semibold mb-3 text-center">Seleccionar Idioma</h4>
                                 <div class="grid grid-cols-2 gap-2">
@@ -114,7 +114,7 @@ import { MenuItem } from 'primeng/api';
                                     </button>
                                 </div>
                             </div>
-                        </p-overlaypanel>
+                        </p-popover>
                     </div>
 
                     <button type="button" class="layout-topbar-action ml-2" (click)="toggleDarkMode()">
