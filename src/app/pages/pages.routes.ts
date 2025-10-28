@@ -3,7 +3,7 @@ import { Documentation } from './documentation/documentation';
 import { Crud } from './crud/crud';
 import { Empty } from './empty/empty';
 import { authGuard, publicGuard } from './guards/auth.guard';
-import { Userscrud } from './userscrud/userscrud';
+import { Solicitudes } from './solicitudes/solicitudes';
 
 export default [
     { 
@@ -17,8 +17,8 @@ export default [
         canActivate: [authGuard]
     },
     { 
-        path: 'userscrud', 
-        component: Userscrud,
+        path: 'solicitudes', 
+        component: Solicitudes,
         canActivate: [authGuard]
     },
     { 

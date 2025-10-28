@@ -1,0 +1,204 @@
+{
+  "portfolio": {
+    "hero": {
+      "title": "Multiplatform Software Developer with",
+      "subtitle": "years of experience in Frontend and Backend with",
+      "subtitle2": "JavaScript and PHP.",
+      "description": "I'm from Mérida, Yucatán, Mexico 🇲🇽 and I specialize in building efficient solutions with modern technologies like Next.js, React, Yii2, Laravel and more."
+    },
+    "features": {
+      "title": "Tech Stack",
+      "subtitle": "Experience with technologies and tools.",
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "description": "Experience in frontend and backend with React, Vue, Angular, PHP Yii2 and Laravel."
+      },
+      "scalable": {
+        "title": "Scalable and Modern Solutions",
+        "description": "Development of scalable applications with Next.js, TypeScript and PostgreSQL."
+      },
+      "mobile": {
+        "title": "Mobile Applications",
+        "description": "Experience in mobile app development with React Native and Expo."
+      },
+      "ui": {
+        "title": "Efficient UI/UX",
+        "description": "Use of Tailwind CSS and Bootstrap for modern and responsive interfaces."
+      },
+      "database": {
+        "title": "Database Optimization",
+        "description": "Efficient management of SQL and NoSQL databases."
+      },
+      "security": {
+        "title": "Best Practices and Security",
+        "description": "Clean, well-documented code following best practices."
+      },
+      "suggestion": {
+        "author": "Marco Blanco",
+        "position": "CEO of CodyExpert",
+        "description": "Rafael is an exceptional developer who has significantly contributed to our team. His dedication and technical skills have been fundamental to the success of our projects."
+      }
+    },
+    "highlights": {
+      "title": "Work Experience",
+      "subtitle": "I have experience in international software development, building management platforms for companies. I'm passionate about creating efficient, scalable and high-performance solutions.",
+      "brentec": {
+        "title": "Brentec Technological Solutions",
+        "position": "Software Developer",
+        "period": "February 2025 - Present",
+        "description": "In my role as a software developer at Brentec, I contribute to the development and maintenance of Bonobo, an essential platform for the energy industry. My responsibilities include implementing new features, optimizing processes and improving performance, ensuring a smooth and efficient user experience. Additionally, I integrate Bonobo with enterprise systems, optimize databases and apply security standards and regulatory compliance, working closely with multidisciplinary teams to create scalable and effective solutions."
+      },
+      "codyexpert": {
+        "title": "CodyExpert",
+        "position": "Full-Stack Developer",
+        "period": "June 2024 - February 2025",
+        "description": "At CodyExpert, I developed customized technological solutions for business administration, focusing on modernizing scalable platforms and web applications.",
+        "projects": {
+          "title": "Featured projects:",
+          "visitplan": {
+            "title": "Visit Plan - Visit Management System:",
+            "description": "I contributed to developing the migration to a modern solution with React and Azure, optimizing visit management for an important national beverage company."
+          },
+          "sopmex": {
+            "title": "SOPMEX - Service Station Management:",
+            "description": "I developed a platform for gas station administration with PHP and Yii2, improving operability and user experience."
+          },
+          "conclusion": "This experience strengthened my skills in scalable solutions and collaboration in strategic projects."
+        }
+      }
+    },
+    "contact": {
+      "title": "Let's work together?",
+      "subtitle": "Tell me about your project and let's create something amazing",
+      "info": {
+        "title": "Let's talk about your project",
+        "description": "I'm ready to help you bring your ideas to life. From web development to mobile apps, we can create solutions that make a difference.",
+        "response_time": "Response time: 24 hours",
+        "security": "Your information is secure and will only be used to contact you about your project."
+      },
+      "email": {
+        "title": "Email",
+        "value": "mxrafael.solis@gmail.com"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "+52 999 958 3010"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "linkedin.com/in/rafaelxs"
+      },
+      "form": {
+        "success": {
+          "title": "Message Sent!",
+          "message": "Thank you for contacting me. I have received your proposal and will respond within the next 24 hours.",
+          "another": "Send another message"
+        },
+        "name": "Name",
+        "name.placeholder": "Your full name",
+        "name.required": "The name is required",
+        "email": "Email",
+        "email.placeholder": "your@email.com",
+        "email.required": "The email is required",
+        "email.invalid": "The email is invalid",
+        "company": "Company / Project",
+        "company.required": "The company is required",
+        "company.placeholder": "Name of your company or project",
+        "phone": "Phone",
+        "phone.required": "The phone is required",
+        "phone.placeholder": "Your phone number",
+        "projectType": "Project Type",
+        "projectType.required": "The project type is required",
+        "budget": "Budget",
+        "budget.required": "The budget is required",
+        "budget.placeholder": "Approximate budget",
+        "timeline": "When do you need the project?",
+        "timeline.required": "The timeline is required",
+        "timeline.placeholder": "When do you need the project?",
+        "message": "Tell me about your project",
+        "message.required": "The message is required",
+        "message.placeholder": "Tell me about your project",
+        "submit": "Send proposal",
+        "submit.required": "The submit is required",
+        "submit.placeholder": "Send proposal",
+        "projectType.placeholder": "Select the project type"
+
+      },
+      "projectTypes": {
+        "web": "Web Development",
+        "mobile": "Mobile Development",
+        "backend": "Backend Development",
+        "ecommerce": "E-commerce",
+        "management": "Management System",
+        "consulting": "Consulting",
+        "maintenance": "Maintenance/Improvements",
+        "other": "Other"
+      },
+      "budget": {
+        "0-1k": "Less than $1,000 MXN",
+        "1k-5k": "$1,000 - $5,000 MXN",
+        "5k-10k": "$5,000 - $10,000 MXN",
+        "10k-25k": "$10,000 - $25,000 MXN",
+        "25k-50k": "$25,000 MXN - $50,000 MXN",
+        "50k-plus": "More than $50,000 MXN",
+        "por-definir": "To define"
+      },
+      "timeline": {
+        "urgent": "Urgent (1-2 weeks)",
+        "1-month": "1 month",
+        "2-3-months": "2-3 months",
+        "3-6-months": "3-6 months",
+        "6-plus-months": "More than 6 months",
+        "flexible": "Flexible"
+      }
+    },
+    "pricing": {
+      "title": "My Services",
+      "subtitle": "Customized solutions for your technological needs",
+      "web": {
+        "title": "Web Development",
+        "subtitle": "Modern and responsive web applications",
+        "features": [
+          "Corporate websites",
+          "SPA applications with React / Angular / Next.js / Vue",
+          "E-commerce, online stores, inventory management, etc.",
+          "Performance optimization",
+          "Modern and attractive interface design"
+        ]
+      },
+      "backend": {
+        "title": "Backend Development",
+        "subtitle": "Scalable APIs and services",
+        "features": [
+          "RESTful APIs",
+          "Professional development with PHP, Yii2 or Laravel",
+          "Integration with SQL and NoSQL databases",
+          "Security and authentication following best practices",
+          "Microservices development for greater scalability"
+        ]
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "subtitle": "Cross-platform mobile applications",
+        "features": [
+          "Apps with React Native and/or Expo",
+          "API integration",
+          "App Store publication",
+          "Maintenance and updates",
+          "Mobile app optimization for performance",
+          "Development of intuitive and attractive user interfaces"
+        ]
+      }
+    },
+    "navigation": {
+      "home": "Home",
+      "tech_stack": "Tech Stack",
+      "experience": "Experience",
+      "services": "My Services",
+      "contact_me": "Contact Me"
+    },
+    "footer": {
+      "text": "Rafael Solis Portfolio by"
+    }
+  }
+}

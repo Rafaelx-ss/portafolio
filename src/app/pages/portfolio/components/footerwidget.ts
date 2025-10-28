@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'footer-widget',
-    imports: [RouterModule],
+    imports: [RouterModule, TranslateModule],
     template: `<div class="layout-footer">
-        Portafolio de Rafael Solis by
+        {{ 'portfolio.footer.text' | translate }}
         <a href="https://github.com/Rafaelx-ss" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">Rafael Solis.</a>
     </div>`
 })

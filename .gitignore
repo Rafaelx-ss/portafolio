@@ -44,3 +44,12 @@ Thumbs.db
 
 # Environment variables
 .env
+.env.local
+.env.production
+.env.staging
+*.env
+env.example
+ENVIRONMENT_SETUP.md
+
+src/environments/environment.ts
+src/environments/environment.prod.ts

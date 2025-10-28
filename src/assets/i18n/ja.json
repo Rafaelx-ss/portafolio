@@ -1,0 +1,203 @@
+{
+  "portfolio": {
+    "hero": {
+      "title": "マルチプラットフォームソフトウェア開発者、",
+      "subtitle": "年のフロントエンドとバックエンド経験を持つ",
+      "subtitle2": "JavaScriptとPHPの専門家。",
+      "description": "私はメキシコ、ユカタン州メリダ🇲🇽出身で、Next.js、React、Yii2、Laravelなどの最新技術を使用して効率的なソリューションを構築することに特化しています。"
+    },
+    "features": {
+      "title": "テックスタック",
+      "subtitle": "技術とツールでの経験。",
+      "fullstack": {
+        "title": "フルスタック開発",
+        "description": "React、Vue、Angular、PHP Yii2、Laravelを使用したフロントエンドとバックエンドでの経験。"
+      },
+      "scalable": {
+        "title": "スケーラブルでモダンなソリューション",
+        "description": "Next.js、TypeScript、PostgreSQLを使用したスケーラブルなアプリケーションの開発。"
+      },
+      "mobile": {
+        "title": "モバイルアプリケーション",
+        "description": "React NativeとExpoを使用したモバイルアプリ開発の経験。"
+      },
+      "ui": {
+        "title": "効率的なUI/UX",
+        "description": "モダンでレスポンシブなインターフェースのためにTailwind CSSとBootstrapを使用。"
+      },
+      "database": {
+        "title": "データベース最適化",
+        "description": "SQLとNoSQLデータベースの効率的な管理。"
+      },
+      "security": {
+        "title": "ベストプラクティスとセキュリティ",
+        "description": "ベストプラクティスに従ったクリーンでよく文書化されたコード。"
+      },
+      "suggestion": {
+        "author": "Marco Blanco",
+        "position": "CodyExpert CEO",
+        "description": "ラファエルは私たちのチームに大きく貢献した優秀な開発者です。彼の献身と技術スキルは、私たちのプロジェクトの成功に不可欠でした。"
+      }
+    },
+    "highlights": {
+      "title": "職歴",
+      "subtitle": "国際的なソフトウェア開発の経験があり、企業向けの管理プラットフォームを構築しています。効率的でスケーラブル、高性能なソリューションの作成に情熱を注いでいます。",
+      "brentec": {
+        "title": "Brentecテクノロジーソリューション",
+        "position": "ソフトウェア開発者",
+        "period": "2025年2月 - 現在",
+        "description": "Brentecでのソフトウェア開発者としての役割で、エネルギー業界にとって不可欠なプラットフォームであるBonoboの開発とメンテナンスに貢献しています。私の責任には、新機能の実装、プロセスの最適化、パフォーマンスの向上が含まれ、スムーズで効率的なユーザーエクスペリエンスを保証しています。さらに、Bonoboをエンタープライズシステムと統合し、データベースを最適化し、セキュリティ標準と規制遵守を適用し、スケーラブルで効果的なソリューションを作成するために多分野のチームと密接に協力しています。"
+      },
+      "codyexpert": {
+        "title": "CodyExpert",
+        "position": "フルスタック開発者",
+        "period": "2024年6月 - 2025年2月",
+        "description": "CodyExpertでは、企業管理のためのカスタマイズされた技術ソリューションを開発し、スケーラブルなプラットフォームとWebアプリケーションの近代化に焦点を当てました。",
+        "projects": {
+          "title": "注目のプロジェクト：",
+          "visitplan": {
+            "title": "Visit Plan - 訪問管理システム：",
+            "description": "ReactとAzureを使用したモダンなソリューションへの移行の開発に貢献し、重要な国内飲料会社の訪問管理を最適化しました。"
+          },
+          "sopmex": {
+            "title": "SOPMEX - サービスステーション管理：",
+            "description": "PHPとYii2を使用してガソリンスタンド管理のためのプラットフォームを開発し、操作性とユーザーエクスペリエンスを向上させました。"
+          },
+          "conclusion": "この経験は、スケーラブルなソリューションと戦略的プロジェクトでのコラボレーションにおける私のスキルを強化しました。"
+        }
+      }
+    },
+    "contact": {
+      "title": "一緒に働きませんか？",
+      "subtitle": "あなたのプロジェクトについて教えてください。素晴らしいものを作りましょう",
+      "info": {
+        "title": "あなたのプロジェクトについて話しましょう",
+        "description": "あなたのアイデアを実現するお手伝いをする準備ができています。Web開発からモバイルアプリまで、違いを生むソリューションを作成できます。",
+        "response_time": "応答時間：24時間",
+        "security": "あなたの情報は安全で、プロジェクトについて連絡するためにのみ使用されます。"
+      },
+      "email": {
+        "title": "メール",
+        "value": "mxrafael.solis@gmail.com"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "+52 999 958 3010"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "linkedin.com/in/rafaelxs"
+      },
+      "form": {
+        "success": {
+          "title": "メッセージ送信完了！",
+          "message": "お問い合わせいただき、ありがとうございます。あなたの提案を受け取りました。次の24時間以内に回答いたします。",
+          "another": "別のメッセージを送信"
+        },
+        "name": "名前",
+        "name.placeholder": "あなたのフルネーム",
+        "name.required": "名前は必須です",
+        "email": "メール",
+        "email.placeholder": "your@email.com",
+        "email.required": "メールは必須です",
+        "email.invalid": "メールが無効です",
+        "company": "会社 / プロジェクト",
+        "company.required": "会社は必須です",
+        "company.placeholder": "あなたの会社またはプロジェクト名",
+        "phone": "電話",
+        "phone.required": "電話は必須です",
+        "phone.placeholder": "あなたの電話番号",
+        "projectType": "プロジェクトタイプ",
+        "projectType.required": "プロジェクトタイプは必須です",
+        "budget": "予算",
+        "budget.required": "予算は必須です",
+        "budget.placeholder": "概算予算",
+        "timeline": "プロジェクトはいつ必要ですか？",
+        "timeline.required": "タイムラインは必須です",
+        "timeline.placeholder": "プロジェクトはいつ必要ですか？",
+        "message": "あなたのプロジェクトについて教えてください",
+        "message.required": "メッセージは必須です",
+        "message.placeholder": "あなたのプロジェクトについて教えてください",
+        "submit": "提案を送信",
+        "submit.required": "送信は必須です",
+        "submit.placeholder": "提案を送信",
+        "projectType.placeholder": "プロジェクトタイプを選択"
+      },
+      "projectTypes": {
+        "web": "Web開発",
+        "mobile": "モバイル開発",
+        "backend": "バックエンド開発",
+        "ecommerce": "Eコマース",
+        "management": "管理システム",
+        "consulting": "コンサルティング",
+        "maintenance": "メンテナンス/改善",
+        "other": "その他"
+      },
+      "budget": {
+        "0-1k": "$1,000 MXN未満",
+        "1k-5k": "$1,000 - $5,000 MXN",
+        "5k-10k": "$5,000 - $10,000 MXN",
+        "10k-25k": "$10,000 - $25,000 MXN",
+        "25k-50k": "$25,000 MXN - $50,000 MXN",
+        "50k-plus": "$50,000 MXN以上",
+        "por-definir": "未定"
+      },
+      "timeline": {
+        "urgent": "緊急（1-2週間）",
+        "1-month": "1ヶ月",
+        "2-3-months": "2-3ヶ月",
+        "3-6-months": "3-6ヶ月",
+        "6-plus-months": "6ヶ月以上",
+        "flexible": "柔軟"
+      }
+    },
+    "pricing": {
+      "title": "私のサービス",
+      "subtitle": "あなたの技術的ニーズに合わせたカスタマイズされたソリューション",
+      "web": {
+        "title": "Web開発",
+        "subtitle": "モダンでレスポンシブなWebアプリケーション",
+        "features": [
+          "コーポレートウェブサイト",
+          "React / Angular / Next.js / Vueを使用したSPAアプリケーション",
+          "Eコマース、オンラインストア、在庫管理など",
+          "パフォーマンス最適化",
+          "モダンで魅力的なインターフェースデザイン"
+        ]
+      },
+      "backend": {
+        "title": "バックエンド開発",
+        "subtitle": "スケーラブルなAPIとサービス",
+        "features": [
+          "RESTful API",
+          "PHP、Yii2、Laravelを使用したプロフェッショナル開発",
+          "SQLとNoSQLデータベースとの統合",
+          "ベストプラクティスに従ったセキュリティと認証",
+          "より大きなスケーラビリティのためのマイクロサービス開発"
+        ]
+      },
+      "mobile": {
+        "title": "モバイル開発",
+        "subtitle": "クロスプラットフォームモバイルアプリケーション",
+        "features": [
+          "React Nativeおよび/またはExpoを使用したアプリ",
+          "API統合",
+          "アプリストア公開",
+          "メンテナンスとアップデート",
+          "パフォーマンスのためのモバイルアプリ最適化",
+          "直感的で魅力的なユーザーインターフェースの開発"
+        ]
+      }
+    },
+    "navigation": {
+      "home": "ホーム",
+      "tech_stack": "テックスタック",
+      "experience": "経験",
+      "services": "私のサービス",
+      "contact_me": "お問い合わせ"
+    },
+    "footer": {
+      "text": "Rafael Solisポートフォリオ by"
+    }
+  }
+}

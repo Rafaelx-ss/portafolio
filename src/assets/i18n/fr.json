@@ -1,0 +1,203 @@
+{
+  "portfolio": {
+    "hero": {
+      "title": "Développeur de logiciels multiplateforme avec",
+      "subtitle": "ans d'expérience en Frontend et Backend avec",
+      "subtitle2": "JavaScript et PHP.",
+      "description": "Je suis de Mérida, Yucatán, Mexique 🇲🇽 et je me spécialise dans la construction de solutions efficaces avec des technologies modernes comme Next.js, React, Yii2, Laravel et plus."
+    },
+    "features": {
+      "title": "Stack Technologique",
+      "subtitle": "Expérience avec les technologies et outils.",
+      "fullstack": {
+        "title": "Développement Full-Stack",
+        "description": "Expérience en frontend et backend avec React, Vue, Angular, PHP Yii2 et Laravel."
+      },
+      "scalable": {
+        "title": "Solutions Évolutives et Modernes",
+        "description": "Développement d'applications évolutives avec Next.js, TypeScript et PostgreSQL."
+      },
+      "mobile": {
+        "title": "Applications Mobiles",
+        "description": "Expérience dans le développement d'applications mobiles avec React Native et Expo."
+      },
+      "ui": {
+        "title": "UI/UX Efficace",
+        "description": "Utilisation de Tailwind CSS et Bootstrap pour des interfaces modernes et responsives."
+      },
+      "database": {
+        "title": "Optimisation des Bases de Données",
+        "description": "Gestion efficace des bases de données SQL et NoSQL."
+      },
+      "security": {
+        "title": "Meilleures Pratiques et Sécurité",
+        "description": "Code propre, bien documenté et suivant les meilleures pratiques."
+      },
+      "suggestion": {
+        "author": "Marco Blanco",
+        "position": "PDG de CodyExpert",
+        "description": "Rafael est un développeur exceptionnel qui a contribué de manière significative à notre équipe. Sa dévotion et ses compétences techniques ont été fondamentales pour le succès de nos projets."
+      }
+    },
+    "highlights": {
+      "title": "Expérience Professionnelle",
+      "subtitle": "J'ai de l'expérience dans le développement de logiciels international, construisant des plateformes de gestion pour les entreprises. Je suis passionné par la création de solutions efficaces, évolutives et performantes.",
+      "brentec": {
+        "title": "Solutions Technologiques Brentec",
+        "position": "Développeur de Logiciels",
+        "period": "Février 2025 - Présent",
+        "description": "Dans mon rôle de développeur de logiciels chez Brentec, je contribue au développement et à la maintenance de Bonobo, une plateforme essentielle pour l'industrie énergétique. Mes responsabilités incluent l'implémentation de nouvelles fonctionnalités, l'optimisation des processus et l'amélioration des performances, assurant une expérience utilisateur fluide et efficace. De plus, j'intègre Bonobo avec des systèmes d'entreprise, j'optimise les bases de données et j'applique des standards de sécurité et de conformité réglementaire, travaillant étroitement avec des équipes multidisciplinaires pour créer des solutions évolutives et efficaces."
+      },
+      "codyexpert": {
+        "title": "CodyExpert",
+        "position": "Développeur Full-Stack",
+        "period": "Juin 2024 - Février 2025",
+        "description": "Chez CodyExpert, j'ai développé des solutions technologiques personnalisées pour l'administration d'entreprise, me concentrant sur la modernisation de plateformes et d'applications web évolutives.",
+        "projects": {
+          "title": "Projets en vedette :",
+          "visitplan": {
+            "title": "Visit Plan - Système de Gestion des Visites :",
+            "description": "J'ai contribué au développement de la migration vers une solution moderne avec React et Azure, optimisant la gestion des visites pour une importante entreprise de boissons nationale."
+          },
+          "sopmex": {
+            "title": "SOPMEX - Gestion des Stations-Service :",
+            "description": "J'ai développé une plateforme pour l'administration des stations-service avec PHP et Yii2, améliorant l'opérabilité et l'expérience utilisateur."
+          },
+          "conclusion": "Cette expérience a renforcé mes compétences en solutions évolutives et en collaboration sur des projets stratégiques."
+        }
+      }
+    },
+    "contact": {
+      "title": "Travaillons ensemble ?",
+      "subtitle": "Parlez-moi de votre projet et créons quelque chose d'incroyable",
+      "info": {
+        "title": "Parlons de votre projet",
+        "description": "Je suis prêt à vous aider à donner vie à vos idées. Du développement web aux applications mobiles, nous pouvons créer des solutions qui font la différence.",
+        "response_time": "Temps de réponse : 24 heures",
+        "security": "Vos informations sont sécurisées et ne seront utilisées que pour vous contacter à propos de votre projet."
+      },
+      "email": {
+        "title": "Email",
+        "value": "mxrafael.solis@gmail.com"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "+52 999 958 3010"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "linkedin.com/in/rafaelxs"
+      },
+      "form": {
+        "success": {
+          "title": "Message Envoyé !",
+          "message": "Merci de m'avoir contacté. J'ai reçu votre proposition et répondrai dans les prochaines 24 heures.",
+          "another": "Envoyer un autre message"
+        },
+        "name": "Nom",
+        "name.placeholder": "Votre nom complet",
+        "name.required": "Le nom est requis",
+        "email": "Email",
+        "email.placeholder": "votre@email.com",
+        "email.required": "L'email est requis",
+        "email.invalid": "L'email est invalide",
+        "company": "Entreprise / Projet",
+        "company.required": "L'entreprise est requise",
+        "company.placeholder": "Nom de votre entreprise ou projet",
+        "phone": "Téléphone",
+        "phone.required": "Le téléphone est requis",
+        "phone.placeholder": "Votre numéro de téléphone",
+        "projectType": "Type de Projet",
+        "projectType.required": "Le type de projet est requis",
+        "budget": "Budget",
+        "budget.required": "Le budget est requis",
+        "budget.placeholder": "Budget approximatif",
+        "timeline": "Quand avez-vous besoin du projet ?",
+        "timeline.required": "Le délai est requis",
+        "timeline.placeholder": "Quand avez-vous besoin du projet ?",
+        "message": "Parlez-moi de votre projet",
+        "message.required": "Le message est requis",
+        "message.placeholder": "Parlez-moi de votre projet",
+        "submit": "Envoyer la proposition",
+        "submit.required": "L'envoi est requis",
+        "submit.placeholder": "Envoyer la proposition",
+        "projectType.placeholder": "Sélectionnez le type de projet"
+      },
+      "projectTypes": {
+        "web": "Développement Web",
+        "mobile": "Développement Mobile",
+        "backend": "Développement Backend",
+        "ecommerce": "E-commerce",
+        "management": "Système de Gestion",
+        "consulting": "Conseil",
+        "maintenance": "Maintenance/Améliorations",
+        "other": "Autre"
+      },
+      "budget": {
+        "0-1k": "Moins de $1,000 MXN",
+        "1k-5k": "$1,000 - $5,000 MXN",
+        "5k-10k": "$5,000 - $10,000 MXN",
+        "10k-25k": "$10,000 - $25,000 MXN",
+        "25k-50k": "$25,000 MXN - $50,000 MXN",
+        "50k-plus": "Plus de $50,000 MXN",
+        "por-definir": "À définir"
+      },
+      "timeline": {
+        "urgent": "Urgent (1-2 semaines)",
+        "1-month": "1 mois",
+        "2-3-months": "2-3 mois",
+        "3-6-months": "3-6 mois",
+        "6-plus-months": "Plus de 6 mois",
+        "flexible": "Flexible"
+      }
+    },
+    "pricing": {
+      "title": "Mes Services",
+      "subtitle": "Solutions personnalisées pour vos besoins technologiques",
+      "web": {
+        "title": "Développement Web",
+        "subtitle": "Applications web modernes et responsives",
+        "features": [
+          "Sites web corporatifs",
+          "Applications SPA avec React / Angular / Next.js / Vue",
+          "E-commerce, boutiques en ligne, gestion d'inventaire, etc.",
+          "Optimisation des performances",
+          "Conception d'interfaces modernes et attractives"
+        ]
+      },
+      "backend": {
+        "title": "Développement Backend",
+        "subtitle": "APIs et services évolutifs",
+        "features": [
+          "APIs RESTful",
+          "Développement professionnel avec PHP, Yii2 ou Laravel",
+          "Intégration avec des bases de données SQL et NoSQL",
+          "Sécurité et authentification suivant les meilleures pratiques",
+          "Développement de microservices pour une plus grande évolutivité"
+        ]
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "subtitle": "Applications mobiles multiplateformes",
+        "features": [
+          "Apps avec React Native et/ou Expo",
+          "Intégration API",
+          "Publication sur les App Stores",
+          "Maintenance et mises à jour",
+          "Optimisation des applications mobiles pour les performances",
+          "Développement d'interfaces utilisateur intuitives et attractives"
+        ]
+      }
+    },
+    "navigation": {
+      "home": "Accueil",
+      "tech_stack": "Stack Technologique",
+      "experience": "Expérience",
+      "services": "Mes Services",
+      "contact_me": "Contactez-moi"
+    },
+    "footer": {
+      "text": "Portfolio de Rafael Solis by"
+    }
+  }
+}

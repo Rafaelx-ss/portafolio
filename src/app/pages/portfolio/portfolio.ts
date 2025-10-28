@@ -21,17 +21,14 @@ import { ContactWidget } from './components/contactwidget';
         <div class="bg-surface-0 dark:bg-surface-900">
             <div id="home" class="landing-wrapper">
                 <topbar-widget class="py-6 px-6 flex items-center justify-between sticky top-0 z-50 bg-surface-0 dark:bg-surface-900 w-full" />
-                <contact-widget />
-
                 <hero-widget />
                 <features-widget />
                 <highlights-widget />
+                <contact-widget />
                 <pricing-widget />
                 <footer-widget />
             </div>
         </div>
     `
 })
-export class Portfolio {
-
-}
+export class Portfolio {}

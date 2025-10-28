@@ -4,11 +4,12 @@ import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { DialogModule } from 'primeng/dialog';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'hero-widget',
     standalone: true,
-    imports: [ButtonModule, RippleModule, DialogModule, CommonModule],
+    imports: [ButtonModule, RippleModule, DialogModule, CommonModule, TranslateModule],
     template: `
         <div
             id="hero"
@@ -17,17 +18,19 @@ import { CommonModule } from '@angular/common';
         >
             <div class="mx-4 md:mx-20 mt-0 md:mt-6">
                 <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
-                    <span class="font-light block">Desarrollador de Software Multiplataforma con </span>
-                    +2 años de experiencia en Frontend y Backend con 
-                    <span class="font-light block">JavaScript y PHP.</span>
+                    <span class="font-light block">{{ 'portfolio.hero.title' | translate }}</span>
+                    +{{ years }} {{ 'portfolio.hero.subtitle' | translate }}
+                    <span class="font-light block">{{ 'portfolio.hero.subtitle2' | translate }}</span>
                 </h1>
                 <p class="font-normal text-lg md:text-2xl leading-normal md:mt-4 text-gray-700" style="max-width: 800px;">
-                    Soy de Mérida, Yucatán, México 🇲🇽 y me especializo en construir soluciones eficientes con tecnologías modernas como Next.js, React, Yii2, Laravel y más.
+                    {{ 'portfolio.hero.description' | translate }}
                 </p>
             </div>
             <div class="flex justify-center md:justify-end mb-[100px] xl:mb-[40px] lg:mt-[100px] md:mt-[30px]">
-                <div class="w-10/12 md:w-7/12 lg:w-6/12 xl:w-5/12 mt-0 lg:mt-[-100px] 
-    grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-5">
+                <div
+                    class="w-10/12 md:w-7/12 lg:w-6/12 xl:w-5/12 mt-0 lg:mt-[-100px] 
+    grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-5"
+                >
                     <a href="https://es.react.dev/" target="_blank" class="logo-container react-logo flex flex-col justify-center items-center">
                         <img src="assets/svg/react_light.svg" alt="React" class="w-16 h-16 sm:w-20 sm:h-20 md:w-full md:h-auto" />
                         <span class="logo-name">React</span>
@@ -95,7 +98,7 @@ import { CommonModule } from '@angular/common';
                     <a href="https://git-scm.com/" target="_blank" class="logo-container git-logo flex flex-col justify-center items-center">
                         <img src="assets/svg/git.svg" alt="Git" class="w-16 h-16 sm:w-20 sm:h-20 md:w-full md:h-auto" />
                         <span class="logo-name">Git</span>
-                    </a>                
+                    </a>
                     <a href="https://wordpress.org/" target="_blank" class="logo-container wordpress-logo flex flex-col justify-center items-center">
                         <img src="assets/svg/wordpress.svg" alt="WordPress" class="w-16 h-16 sm:w-20 sm:h-20 md:w-full md:h-auto" />
                         <span class="logo-name">WordPress</span>
@@ -105,18 +108,17 @@ import { CommonModule } from '@angular/common';
         </div>
     `
 })
-export class HeroWidget {}
+export class HeroWidget {
+    currentYear = new Date().getFullYear();
+    years = this.currentYear - 2022;
+}
 
 @Component({
     selector: 'app-root',
     standalone: true,
     imports: [HeroWidget],
-    template: `
-        <hero-widget></hero-widget>
-    `,
+    template: ` <hero-widget></hero-widget> `
 })
-export class App {
-    name = 'Angular';
-}
+export class App {}
 
 bootstrapApplication(App);

@@ -7,42 +7,34 @@ import { SelectModule } from 'primeng/select';
 import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
 import { DividerModule } from 'primeng/divider';
+import { Solicitud, SolicitudService } from '../../service/solicitud.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { I18nService } from '../../../services/i18n.service';
 
 interface ContactForm {
-    name: string;
-    email: string;
-    company: string;
-    projectType: string;
-    budget: string;
-    timeline: string;
-    message: string;
-    phone: string;
+    nombreCliente: string;
+    correoCliente: string;
+    empresaOProyecto: string;
+    tipoProyecto: string;
+    presupuesto: string;
+    tiempoEstimado: string;
+    mensaje: string;
+    telefono: string;
 }
 
 @Component({
     selector: 'contact-widget',
     standalone: true,
-    imports: [
-        CommonModule, 
-        FormsModule, 
-        InputTextModule, 
-        TextareaModule, 
-        SelectModule, 
-        ButtonModule, 
-        MessageModule, 
-        ToastModule, 
-        RippleModule,
-        DividerModule
-    ],
-    providers: [MessageService],
+    imports: [CommonModule, FormsModule, InputTextModule, TextareaModule, SelectModule, ButtonModule, MessageModule, ToastModule, RippleModule, DividerModule, TranslateModule],
+    providers: [MessageService, SolicitudService],
     template: `
         <div id="contact" class="py-6 px-6 lg:px-20 mx-0 my-12 lg:mx-20">
             <div class="text-center mb-12">
-                <div class="text-surface-900 dark:text-surface-0 font-normal mb-4 text-4xl">¿Trabajamos juntos?</div>
-                <span class="text-muted-color text-2xl">Cuéntame sobre tu proyecto y creemos algo increíble</span>
+                <div class="text-surface-900 dark:text-surface-0 font-normal mb-4 text-4xl">{{ 'portfolio.contact.title' | translate }}</div>
+                <span class="text-muted-color text-2xl">{{ 'portfolio.contact.subtitle' | translate }}</span>
             </div>
 
             <div class="grid grid-cols-12 gap-8 justify-center">
@@ -50,14 +42,11 @@ interface ContactForm {
                 <div class="col-span-12 lg:col-span-4">
                     <div class="card h-full flex flex-col justify-center p-6" style="border-radius: 15px; background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(156, 39, 176, 0.1))">
                         <div class="text-center mb-8">
-                            <div class="flex items-center justify-center bg-primary mb-4 mx-auto" style="width: 4rem; height: 4rem; border-radius: 50%">
-                                <i class="pi pi-envelope text-2xl text-white"></i>
-                            </div>
-                            <h3 class="text-surface-900 dark:text-surface-0 text-2xl font-semibold mb-2">Hablemos de tu proyecto</h3>
+                            <img src="assets/png/RafaelSolis.png" alt="Rafael Solis" class="mb-8 w-16 shrink-0 mx-auto rounded-full cursor-pointer" />
+
+                            <h3 class="text-surface-900 dark:text-surface-0 text-2xl font-semibold mb-2">{{ 'portfolio.contact.info.title' | translate }}</h3>
                             <p class="text-surface-600 dark:text-surface-200 text-lg">
-                                Estoy listo para ayudarte a hacer realidad tus ideas. 
-                                Desde desarrollo web hasta aplicaciones móviles, 
-                                juntos podemos crear soluciones que marquen la diferencia.
+                                {{ 'portfolio.contact.info.description' | translate }}
                             </p>
                         </div>
 
@@ -67,8 +56,8 @@ interface ContactForm {
                                     <i class="pi pi-envelope text-cyan-600 dark:text-cyan-300"></i>
                                 </div>
                                 <div>
-                                    <p class="text-surface-900 dark:text-surface-0 font-medium">Email</p>
-                                    <p class="text-surface-600 dark:text-surface-200">mxrafael.solis&#64;gmail.com</p>
+                                    <p class="text-surface-900 dark:text-surface-0 font-medium mb-0">{{ 'portfolio.contact.email.title' | translate }}</p>
+                                    <p class="text-surface-600 dark:text-surface-200">{{ 'portfolio.contact.email.value' | translate }}</p>
                                 </div>
                             </div>
 
@@ -77,8 +66,8 @@ interface ContactForm {
                                     <i class="pi pi-whatsapp text-green-600 dark:text-green-300"></i>
                                 </div>
                                 <div>
-                                    <p class="text-surface-900 dark:text-surface-0 font-medium">WhatsApp</p>
-                                    <p class="text-surface-600 dark:text-surface-200">+52 999 958 3010</p>
+                                    <p class="text-surface-900 dark:text-surface-0 font-medium mb-0"> {{ 'portfolio.contact.whatsapp.title' | translate }}</p>
+                                    <p class="text-surface-600 dark:text-surface-200"> {{ 'portfolio.contact.whatsapp.value' | translate }}</p>
                                 </div>
                             </div>
 
@@ -87,44 +76,24 @@ interface ContactForm {
                                     <i class="pi pi-linkedin text-blue-600 dark:text-blue-300"></i>
                                 </div>
                                 <div>
-                                    <p class="text-surface-900 dark:text-surface-0 font-medium">LinkedIn</p>
-                                    <p class="text-surface-600 dark:text-surface-200">linkedin.com/in/rafaelxs</p>
+                                    <p class="text-surface-900 dark:text-surface-0 font-medium mb-0"> {{ 'portfolio.contact.linkedin.title' | translate }}</p>
+                                    <p class="text-surface-600 dark:text-surface-200"> {{ 'portfolio.contact.linkedin.value' | translate }}</p>
                                 </div>
                             </div>
                         </div>
 
-                        <p-divider class="my-6"></p-divider> 
+                        <p-divider class="my-6"></p-divider>
 
                         <div class="text-center">
                             <p class="text-surface-600 dark:text-surface-200 text-sm mb-4">
                                 <i class="pi pi-clock mr-2"></i>
-                                Tiempo de respuesta: 24 horas
+                                {{ 'portfolio.contact.info.response_time' | translate }}
                             </p>
                             <div class="flex justify-center gap-2">
-                                <p-button 
-                                    icon="pi pi-linkedin" 
-                                    severity="secondary" 
-                                    [text]="true" 
-                                    [rounded]="true"
-                                    (click)="openLink('https://www.linkedin.com/in/rafaelxs')"
-                                    pTooltip="LinkedIn"
-                                ></p-button>
-                                <p-button 
-                                    icon="pi pi-github" 
-                                    severity="secondary" 
-                                    [text]="true" 
-                                    [rounded]="true"
-                                    (click)="openLink('https://github.com/Rafaelx-ss')"
-                                    pTooltip="GitHub"
-                                ></p-button>
-                                <p-button 
-                                    icon="pi pi-whatsapp" 
-                                    severity="secondary" 
-                                    [text]="true" 
-                                    [rounded]="true"
-                                    (click)="openLink('https://wa.me/+529999583010')"
-                                    pTooltip="WhatsApp"
-                                ></p-button>
+                                <p-button icon="pi pi-linkedin" severity="secondary" [text]="true" [rounded]="true" (click)="openLink('https://www.linkedin.com/in/rafaelxs')" pTooltip="LinkedIn"></p-button>
+                                <p-button icon="pi pi-github" severity="secondary" [text]="true" [rounded]="true" (click)="openLink('https://github.com/Rafaelx-ss')" pTooltip="GitHub"></p-button>
+                                <p-button icon="pi pi-instagram" severity="secondary" [text]="true" [rounded]="true" (click)="openLink('https://www.instagram.com/rafaelx.ss/')" pTooltip="Instagram"></p-button>
+                                <p-button icon="pi pi-whatsapp" severity="secondary" [text]="true" [rounded]="true" (click)="openLink('https://wa.me/+529999583010')" pTooltip="WhatsApp"></p-button>
                             </div>
                         </div>
                     </div>
@@ -133,61 +102,45 @@ interface ContactForm {
                 <!-- Formulario -->
                 <div class="col-span-12 lg:col-span-8">
                     <div class="card p-6" style="border-radius: 15px">
-                        <form (ngSubmit)="onSubmit()" #form="ngForm" class="space-y-6">
+                        <!-- Estado de éxito -->
+                        <div *ngIf="isSubmitted" class="text-center py-8">
+                            <div class="mb-6">
+                                <div class="flex items-center justify-center w-20 h-20 bg-green-100 dark:bg-green-900 rounded-full mx-auto mb-4">
+                                    <i class="pi pi-check text-4xl text-green-600 dark:text-green-300"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-surface-900 dark:text-surface-0 mb-2">{{ 'portfolio.contact.form.success.title' | translate }}</h3>
+                                <p class="text-surface-600 dark:text-surface-200 text-lg">
+                                    {{ 'portfolio.contact.form.success.message' | translate }}
+                                </p>
+                            </div>
+                            <div class="flex justify-center gap-4">
+                                <p-button [label]="'portfolio.contact.form.success.another' | translate" icon="pi pi-refresh" severity="secondary" [outlined]="true" (click)="resetForm()" pRipple> </p-button>
+                            </div>
+                        </div>
+
+                        <!-- Formulario original -->
+                        <form *ngIf="!isSubmitted" (ngSubmit)="onSubmit()" #form="ngForm" class="space-y-6">
                             <!-- Mensajes de error/success -->
                             <div *ngIf="formErrors.length > 0" class="space-y-2">
-                                <p-message 
-                                    *ngFor="let error of formErrors" 
-                                    severity="error" 
-                                    [text]="error"
-                                    styleClass="w-full"
-                                ></p-message>
+                                <p-message *ngFor="let error of formErrors" severity="error" [text]="error" styleClass="w-full"></p-message>
                             </div>
 
                             <!-- Nombre y Email -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-2">
-                                    <label for="name" class="text-surface-900 dark:text-surface-0 font-medium">
-                                        Nombre completo *
-                                    </label>
-                                    <input 
-                                        pInputText 
-                                        id="name" 
-                                        name="name"
-                                        [(ngModel)]="contactForm.nombreCliente" 
-                                        placeholder="Tu nombre completo"
-                                        class="w-full"
-                                        required
-                                        #nameField="ngModel"
-                                    />
-                                    <p-message 
-                                        *ngIf="nameField.invalid && nameField.touched" 
-                                        severity="error" 
-                                        text="El nombre es requerido"
-                                        styleClass="w-full"
-                                    ></p-message>
+                                    <label for="nombreCliente" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.name' | translate }}  * </label>
+                                    <input pInputText id="nombreCliente" name="nombreCliente" [(ngModel)]="contactForm.nombreCliente" placeholder="{{ 'portfolio.contact.form.name.placeholder' | translate }}" class="w-full" required #nameField="ngModel" />
+                                    <p-message *ngIf="nameField.invalid && nameField.touched" severity="error" text="{{ 'portfolio.contact.form.name.required' | translate }}" styleClass="w-full"></p-message>
                                 </div>
 
                                 <div class="flex flex-col gap-2">
-                                    <label for="email" class="text-surface-900 dark:text-surface-0 font-medium">
-                                        Correo electrónico *
-                                    </label>
-                                    <input 
-                                        pInputText 
-                                        id="email" 
-                                        name="email"
-                                        type="email"
-                                        [(ngModel)]="contactForm.correoCliente" 
-                                        placeholder="tu@email.com"
-                                        class="w-full"
-                                        required
-                                        email
-                                        #emailField="ngModel"
-                                    /> 
-                                    <p-message 
-                                        *ngIf="emailField.invalid && emailField.touched" 
-                                        severity="error" 
-                                        [text]="emailField.errors?.['required'] ? 'El email es requerido' : 'Email inválido'"
+                                    <label for="correoCliente" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.email' | translate }}  * </label>
+                                    <input pInputText id="correoCliente" name="correoCliente" type="email" [(ngModel)]="contactForm.correoCliente" placeholder="{{ 'portfolio.contact.form.email.placeholder' | translate }}" class="w-full" required email #correoClienteField="ngModel" />
+
+                                    <p-message
+                                        *ngIf="correoClienteField.invalid && correoClienteField.touched"
+                                        severity="error"
+                                        [text]="correoClienteField.errors?.['required'] ?  'El correo electrónico es requerido' : 'Correo electrónico inválido'"
                                         styleClass="w-full"
                                     ></p-message>
                                 </div>
@@ -196,134 +149,81 @@ interface ContactForm {
                             <!-- Empresa y Teléfono -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-2">
-                                    <label for="company" class="text-surface-900 dark:text-surface-0 font-medium">
-                                        Empresa / Proyecto
-                                    </label>
-                                    <input 
-                                        pInputText 
-                                        id="company" 
-                                        name="company"
-                                        [(ngModel)]="contactForm.empresaOProyecto" 
-                                        placeholder="Nombre de tu empresa o proyecto"
-                                        class="w-full"
-                                    />
+                                    <label for="empresaOProyecto" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.company' | translate }}  </label>
+                                    <input pInputText id="empresaOProyecto" name="empresaOProyecto" [(ngModel)]="contactForm.empresaOProyecto" placeholder="{{ 'portfolio.contact.form.company.placeholder' | translate }}" class="w-full" />
                                 </div>
 
                                 <div class="flex flex-col gap-2">
-                                    <label for="phone" class="text-surface-900 dark:text-surface-0 font-medium">
-                                        Teléfono
-                                    </label>
-                                    <input 
-                                        pInputText 
-                                        id="phone" 
-                                        name="phone"
-                                        [(ngModel)]="contactForm.telefono" 
-                                        placeholder="+52 999 123 4567"
-                                        class="w-full"
-                                    />
+                                    <label for="telefono" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.phone' | translate }}  </label>
+                                    <input pInputText id="telefono" name="telefono" [(ngModel)]="contactForm.telefono" placeholder="+52 999 123 4567" class="w-full" />
                                 </div>
                             </div>
 
                             <!-- Tipo de proyecto y Presupuesto -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-2">
-                                    <label for="projectType" class="text-surface-900 dark:text-surface-0 font-medium">
-                                        Tipo de proyecto *
-                                    </label>
-                                    <p-select 
-                                        id="projectType"
-                                        name="projectType"
-                                        [(ngModel)]="contactForm.tipoProyecto" 
-                                        [options]="tipoProyecto" 
-                                        optionLabel="label" 
+                                    <label for="tipoProyecto" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.projectType' | translate }}  * </label>
+                                    <p-select
+                                        id="tipoProyecto"
+                                        name="tipoProyecto"
+                                        [(ngModel)]="contactForm.tipoProyecto"
+                                        [options]="tipoProyecto"
+                                        optionLabel="label"
                                         optionValue="value"
-                                        placeholder="Selecciona el tipo de proyecto"
+                                        placeholder="{{ 'portfolio.contact.form.projectType.placeholder' | translate }}"
                                         class="w-full"
                                         required
-                                        #projectTypeField="ngModel"
+                                        #tipoProyectoField="ngModel"
                                     ></p-select>
-                                    <p-message 
-                                        *ngIf="projectTypeField.invalid && projectTypeField.touched" 
-                                        severity="error" 
-                                        text="Selecciona un tipo de proyecto"
-                                        styleClass="w-full"
-                                    ></p-message>
+                                    <p-message *ngIf="tipoProyectoField.invalid && tipoProyectoField.touched" severity="error" text="{{ 'portfolio.contact.form.projectType.required' | translate }}" styleClass="w-full"></p-message>
                                 </div>
 
                                 <div class="flex flex-col gap-2">
-                                    <label for="budget" class="text-surface-900 dark:text-surface-0 font-medium">
-                                        Presupuesto aproximado
-                                    </label>
-                                    <p-select 
-                                        id="budget"
-                                        name="budget"
-                                        [(ngModel)]="contactForm.presupuesto" 
-                                        [options]="budgetRanges" 
-                                        optionLabel="label" 
-                                        optionValue="value"
-                                        placeholder="Selecciona tu presupuesto"
-                                        class="w-full"
-                                    ></p-select>
+                                    <label for="presupuesto" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.budget' | translate }}  </label>
+                                    <p-select id="presupuesto" name="presupuesto" [(ngModel)]="contactForm.presupuesto" [options]="presupuesto" optionLabel="label" optionValue="value" placeholder="{{ 'portfolio.contact.form.budget.placeholder' | translate }}" class="w-full"></p-select>
                                 </div>
                             </div>
 
                             <!-- Timeline -->
                             <div class="flex flex-col gap-2">
-                                <label for="timeline" class="text-surface-900 dark:text-surface-0 font-medium">
-                                    ¿Cuándo necesitas el proyecto?
-                                </label>
-                                <p-select 
-                                    id="timeline"
-                                    name="timeline"
-                                    [(ngModel)]="contactForm.tiempoEstimado" 
-                                    [options]="timelineOptions" 
-                                    optionLabel="label" 
+                                <label for="tiempoEstimado" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.timeline' | translate }}  </label>
+                                <p-select
+                                    id="tiempoEstimado"
+                                    name="tiempoEstimado"
+                                    [(ngModel)]="contactForm.tiempoEstimado"
+                                    [options]="tiempoEstimado"
+                                    optionLabel="label"
                                     optionValue="value"
-                                    placeholder="Selecciona el timeline"
+                                    placeholder="{{ 'portfolio.contact.form.timeline.placeholder' | translate }}"
                                     class="w-full"
                                 ></p-select>
                             </div>
 
                             <!-- Mensaje -->
                             <div class="flex flex-col gap-2">
-                                <label for="message" class="text-surface-900 dark:text-surface-0 font-medium">
-                                    Cuéntame sobre tu proyecto *
-                                </label>
-                                <textarea 
-                                    pTextarea 
-                                    id="message" 
-                                    name="message"
-                                    [(ngModel)]="contactForm.message" 
-                                    placeholder="Describe tu proyecto, objetivos, funcionalidades que necesitas, etc. Mientras más detalles me proporciones, mejor podré ayudarte."
+                                <label for="mensaje" class="text-surface-900 dark:text-surface-0 font-medium"> {{ 'portfolio.contact.form.message' | translate }}  * </label>
+                                <textarea
+                                    pTextarea
+                                    id="mensaje"
+                                    name="mensaje"
+                                    [(ngModel)]="contactForm.mensaje"
+                                    placeholder="{{ 'portfolio.contact.form.message.placeholder' | translate }}"
                                     rows="6"
                                     class="w-full"
                                     required
-                                    #messageField="ngModel"
+                                    #mensajeField="ngModel"
                                 ></textarea>
-                                <p-message 
-                                    *ngIf="messageField.invalid && messageField.touched" 
-                                    severity="error" 
-                                    text="Por favor describe tu proyecto"
-                                    styleClass="w-full"
-                                ></p-message>
+                                <p-message *ngIf="mensajeField.invalid && mensajeField.touched" severity="error" text="{{ 'portfolio.contact.form.message.required' | translate }}" styleClass="w-full"></p-message>
                             </div>
 
                             <!-- Botón de envío -->
                             <div class="flex justify-center pt-4">
-                                <p-button 
-                                    type="submit"
-                                    label="Enviar propuesta" 
-                                    icon="pi pi-send"
-                                    [loading]="isSubmitting"
-                                    [disabled]="isSubmitting"
-                                    styleClass="px-8 py-3 text-lg"
-                                    pRipple
-                                ></p-button>
+                                <p-button type="submit" label="{{ 'portfolio.contact.form.submit' | translate }} Enviar propuesta" icon="pi pi-send" [loading]="isSubmitting" [disabled]="isSubmitting" styleClass="px-8 py-3 text-lg" pRipple></p-button>
                             </div>
 
                             <div class="text-center text-sm text-surface-500 dark:text-surface-400">
                                 <i class="pi pi-shield mr-2"></i>
-                                Tu información está segura y será utilizada únicamente para contactarte sobre tu proyecto.
+                                {{ 'portfolio.contact.info.security' | translate }}
                             </div>
                         </form>
                     </div>
@@ -336,20 +236,21 @@ interface ContactForm {
 })
 export class ContactWidget implements OnInit {
     contactForm: ContactForm = {
-        name: '',
-        email: '',
-        company: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        message: '',
-        phone: ''
+        nombreCliente: '',
+        correoCliente: '',
+        empresaOProyecto: '',
+        tipoProyecto: '',
+        presupuesto: '',
+        tiempoEstimado: '',
+        mensaje: '',
+        telefono: ''
     };
 
     isSubmitting = false;
     formErrors: string[] = [];
+    isSubmitted = false;
 
-    projectTypes = [
+    tipoProyecto = [
         { label: 'Desarrollo Web', value: 'web' },
         { label: 'Aplicación Móvil', value: 'mobile' },
         { label: 'Desarrollo Backend/API', value: 'backend' },
@@ -360,16 +261,17 @@ export class ContactWidget implements OnInit {
         { label: 'Otro', value: 'other' }
     ];
 
-    budgetRanges = [
-        { label: 'Menos de $5,000 USD', value: 'under-5k' },
-        { label: '$5,000 - $10,000 USD', value: '5k-10k' },
-        { label: '$10,000 - $25,000 USD', value: '10k-25k' },
-        { label: '$25,000 - $50,000 USD', value: '25k-50k' },
-        { label: 'Más de $50,000 USD', value: 'over-50k' },
-        { label: 'Por definir', value: 'tbd' }
+    presupuesto = [
+        { label: 'Menos de $1,000 MXN', value: '0-1k' },
+        { label: '$1,000 - $5,000 MXN', value: '1k-5k' },
+        { label: '$5,000 - $10,000 MXN', value: '5k-10k' },
+        { label: '$10,000 - $25,000 MXN', value: '10k-25k' },
+        { label: '$25,000 MXN - $50,000 MXN', value: '25k-50k' },
+        { label: 'Más de $50,000 MXN', value: '50k-plus' },
+        { label: 'Por definir', value: 'por-definir' }
     ];
 
-    timelineOptions = [
+    tiempoEstimado = [
         { label: 'Urgente (1-2 semanas)', value: 'urgent' },
         { label: '1 mes', value: '1-month' },
         { label: '2-3 meses', value: '2-3-months' },
@@ -378,27 +280,31 @@ export class ContactWidget implements OnInit {
         { label: 'Flexible', value: 'flexible' }
     ];
 
-    constructor(private messageService: MessageService) {}
+    constructor(
+        private messageService: MessageService,
+        private solicitudService: SolicitudService,
+        private i18nService: I18nService
+    ) {}
 
     ngOnInit() {
         // Inicialización si es necesaria
     }
 
-    onSubmit() {
+    async onSubmit() {
         this.formErrors = [];
         this.isSubmitting = true;
 
         // Validaciones adicionales
-        if (!this.contactForm.name.trim()) {
+        if (!this.contactForm.nombreCliente.trim()) {
             this.formErrors.push('El nombre es requerido');
         }
-        if (!this.contactForm.email.trim()) {
+        if (!this.contactForm.correoCliente.trim()) {
             this.formErrors.push('El email es requerido');
         }
-        if (!this.contactForm.projectType) {
+        if (!this.contactForm.tipoProyecto) {
             this.formErrors.push('Selecciona un tipo de proyecto');
         }
-        if (!this.contactForm.message.trim()) {
+        if (!this.contactForm.mensaje.trim()) {
             this.formErrors.push('Describe tu proyecto');
         }
 
@@ -407,34 +313,69 @@ export class ContactWidget implements OnInit {
             return;
         }
 
+        // console.log('Contact form:', this.contactForm);
+
+        await this.postSolicitudes(this.contactForm);
+
         // Simular envío (aquí integrarías con tu servicio de email)
-        setTimeout(() => {
+        // setTimeout(() => {
+        //     this.isSubmitting = false;
+        //     this.showSuccessMessage();
+        //     this.resetForm();
+        // }, 2000);
+    }
+
+    async postSolicitudes(contactForm: ContactForm) {
+        try {
+            // Convertir ContactForm a Solicitud
+            const solicitud: Solicitud = {
+                nombreCliente: contactForm.nombreCliente,
+                correoCliente: contactForm.correoCliente,
+                empresaOProyecto: contactForm.empresaOProyecto,
+                telefono: contactForm.telefono,
+                tipoProyecto: contactForm.tipoProyecto,
+                presupuesto: contactForm.presupuesto,
+                tiempoEstimado: contactForm.tiempoEstimado,
+                message: contactForm.mensaje,
+                estado: 'pendiente',
+                regEstado: true
+            };
+
+            const response = await this.solicitudService.createSolicitud(solicitud);
+            this.messageService.add({
+                severity: 'success',
+                summary: '¡Mensaje enviado!',
+                detail: 'Gracias por contactarme. Te responderé en las próximas 24 horas.',
+                life: 5000
+            });
+            this.isSubmitted = true;
             this.isSubmitting = false;
-            this.showSuccessMessage();
-            this.resetForm();
-        }, 2000);
+        } catch (error) {
+            console.error('Error creating solicitud:', error);
+            this.messageService.add({
+                severity: 'error',
+                summary: 'Error',
+                detail: 'Error al enviar el mensaje. Inténtalo de nuevo.',
+                life: 5000
+            });
+            this.isSubmitting = false;
+        }
     }
 
-    private showSuccessMessage() {
-        this.messageService.add({
-            severity: 'success',
-            summary: '¡Mensaje enviado!',
-            detail: 'Gracias por contactarme. Te responderé en las próximas 24 horas.',
-            life: 5000
-        });
-    }
-
-    private resetForm() {
+    resetForm() {
         this.contactForm = {
-            name: '',
-            email: '',
-            company: '',
-            projectType: '',
-            budget: '',
-            timeline: '',
-            message: '',
-            phone: ''
+            nombreCliente: '',
+            correoCliente: '',
+            empresaOProyecto: '',
+            tipoProyecto: '',
+            presupuesto: '',
+            tiempoEstimado: '',
+            mensaje: '',
+            telefono: ''
         };
+        this.isSubmitted = false;
+        this.formErrors = [];
+        this.isSubmitting = false;
     }
 
     openLink(url: string) {

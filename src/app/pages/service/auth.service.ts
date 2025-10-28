@@ -28,7 +28,7 @@ export class AuthService {
     }
   }
 
-  async login(email: string, password: string): Promise<boolean> {
+  async login(email: string, password: string): Promise<{success: boolean, message?: string}> {
     try {
       const { data, error } = await this.supabaseService.supabase.auth.signInWithPassword({
         email,
@@ -37,18 +37,36 @@ export class AuthService {
 
       if (error) {
         console.error('Login error:', error);
-        return false;
+        
+        // Mapear errores específicos de Supabase a mensajes más amigables
+        let errorMessage = 'Credenciales incorrectas';
+        
+        switch (error.message) {
+          case 'Invalid login credentials':
+            errorMessage = 'Email o contraseña incorrectos';
+            break;
+          case 'Email not confirmed':
+            errorMessage = 'Por favor, confirma tu email antes de iniciar sesión';
+            break;
+          case 'Too many requests':
+            errorMessage = 'Demasiados intentos. Espera un momento antes de intentar de nuevo';
+            break;
+          default:
+            errorMessage = error.message || 'Error al iniciar sesión';
+        }
+        
+        return { success: false, message: errorMessage };
       }
 
       if (data.session) {
         this.isAuthenticated.next(true);
-        return true;
+        return { success: true };
       }
       
-      return false;
+      return { success: false, message: 'No se pudo crear la sesión' };
     } catch (error) {
       console.error('Login error:', error);
-      return false;
+      return { success: false, message: 'Error de conexión. Verifica tu internet' };
     }
   }
 
@@ -80,12 +98,11 @@ export class AuthService {
     try {
       const { error } = await this.supabaseService.supabase.auth.signOut();
       if (error) {
-        console.error('Logout error:', error);
+        throw new Error('Error al cerrar sesión');
       }
       this.isAuthenticated.next(false);
     } catch (error) {
-      console.error('Logout error:', error);
-      this.isAuthenticated.next(false);
+      throw new Error('Error al cerrar sesión');
     }
   }
 

@@ -23,19 +23,14 @@ export class AppMenu {
         if (!this.showModules) {
             this.model = [
                 {
-                    label: 'Home',
-                    items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }]
+                    label: 'Solicitudes',
+                    items: [{ label: 'Solicitudes', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/pages/solicitudes'] }]
                 },
                 {
                     label: 'Pages',
                     icon: 'pi pi-fw pi-briefcase',
                     routerLink: ['/pages'],
                     items: [
-                        {
-                            label: 'Crud de usuarios',
-                            icon: 'pi pi-fw pi-user',
-                            routerLink: ['/pages/userscrud']
-                        },
                         {
                             label: 'Landing',
                             icon: 'pi pi-fw pi-globe',
@@ -47,8 +42,8 @@ export class AppMenu {
         } else {
             this.model = [
                 {
-                    label: 'Home',
-                    items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }]
+                    label: 'Solicitudes',
+                    items: [{ label: 'Solicitudes', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/pages/solicitudes'] }]
                 },
                 {
                     label: 'UI Components',
